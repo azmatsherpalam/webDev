@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <title>Nav Page</title>
+  <style>
+    @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+body {
+  font-size:24px;
+  background-image: linear-gradient(to right, rgb(53, 242, 56) , rgb(233, 233, 35));
+}
+
+
+
+ul li {
+  
+  list-style: none;
+  text-align: center;
+  background-color: rgb(243, 101, 158);
+  padding: 10px;
+  
+  
+}
+
+a {
+  text-decoration: none;
+  font-size: 30px;
+  color:white;
+}
+
+i {
+  color:white;
+}
+
+ul {
+  display: flex;
+}
+
+li{
+  flex:2;
+  flex-basis: 130px;
+}
+.social {
+  flex:1;
+}
+
+.hamberger {
+  display: none;
+}
+@media all and (max-width:500px){
+
+ ul {
+  flex-direction: column;
+  justify-content: flex-start;
+  
+ }
+ li{
+  flex-basis: 30px;
+  border: 1px solid black;
+ }
+
+ ul li {
+  text-align: left;
+ }
+
+ .hamberger {
+  display: block;
+}
+
+nav {
+  display: none;
+}
+}
+
+
+ </style>
+ <script>
+function toggleButton() {
+ let current_display=document.getElementById('main-navigation').style.display;
+ if(current_display=="none"){
+  document.getElementById('main-navigation').style.display="Block";
+ } else{
+  document.getElementById('main-navigation').style.display="None";
+ }
+}
+
+ </script>
+</head>
+<body>
+  <i class="hamberger bi bi-list" onclick="toggleButton()"></i>
+<nav id="main-navigation">
+  
+    <ul>
+      <li><a href="">Home</a></li>
+      <li><a href="">About</a></li>
+      <li><a href="">Contact</a></li>
+      <li><a href="">Servies</a></li>
+      <li><a href="">Products</a></li>
+      <li class="social"><i class="bi bi-facebook"></i></li>
+      <li class="social"><i class="bi bi-twitter"></i></li>
+      <li class="social"><i class="bi bi-whatsapp"></i></li>
+      <li class="social"><i class="bi bi-youtube"></i></li>
+
+      
+    </ul>
+
+</nav>
+<header>Welcome to My Website</header>
+</body>
+</html>
